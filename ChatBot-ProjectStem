@@ -1,0 +1,37 @@
+import random
+xx = random.choice(["hi", "Hello", "Wassup", "hey"])
+hi = input(xx + "\n")
+feelingo = input("How do you feel right now? \n")
+if (feelingo == "bad" or feelingo == "Bad"):
+    feelingoreason = input("Oh no! Why so? \n")
+    print("I hope your day gets better!")
+if (feelingo == "good" or feelingo == "great"):
+    print("That's Great! ")
+hobbi = input("Do you have anny hobbies? \n")
+if (hobbi == "Yes" or hobbi == "yes"):
+    whatHobbi = input("What hobbies? \n")
+    print("How fun!")
+elif (hobbi == "no" or hobbi == "No"):
+    pressure1 = input("Well there must be something you enjoy. \n")
+    if (pressure1 == "no" or pressure1 == "No"):
+        print("...")
+        rude1 = input("Why are you like this? \n")
+        if (rude1 == "what" or rude1 == "huh"):
+                print("Oh sure. Act all ignorant. Nevermind, lets move on.")
+    elif (pressure1 == "yes" or pressure1 == "Yes"):
+        elabot = input("Elaborate: \n")
+else:
+    print("Let's move on.")
+lonely = input("Do you have a significant other? \n")
+x = random.choice(["Well neither do I. Wanna meet up later?", "Well too bad. I'll see you when I visit your mother tonight.", "I know a friend that's lonely"])
+y = random.choice(["Lucky, \n goodbye", "Well I hope you have a good life"])
+if (lonely == "yes"):
+    print(y)
+elif(lonely == "no" or lonely == "no"):
+    print(x)
+    if (x == "Well neither do I. Wanna meet up later?"):
+        pressure2 = input(" ")
+        if(pressure2 == "yes"):
+            print("Nice, lets meet up at el Chapuros.")
+        else:
+            print("oh. ok.")
