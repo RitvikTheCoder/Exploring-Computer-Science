@@ -1,0 +1,584 @@
+string_t sheet;
+string_t c1, name, other;
+string_t c1_1, aa, fff, c1_2_2, taco, klop, ff, flamba, fleemba;
+int randomm, all, okBuddy, choice;
+printf("How fast would you like the story telling to go? (type in 0, 1, 2, 3, or 4. All of these values are in seconds.)\n");
+scanf("%i", &choice);
+while (choice != 0 && choice != 1 && choice != 2 && choice != 3 && choice != 4){
+    printf("0, 1, 2, 3, or 4. I'll not allow you to type in any others. Try again.\n");
+    scanf("%i", &choice);
+}
+if (choice == 0){
+    all = 0;
+}
+if (choice == 1){
+    all = 1000;
+}
+if (choice == 2){
+    all = 2000;
+}
+if (choice == 3){
+    all = 3000;
+}
+if (choice == 4){
+    all = 4000;
+}
+printf("Would you like to see the cheat sheet (yes or no)?\n");
+scanf("%s", &sheet);
+delay(all);
+while (sheet != "yes" && sheet != "no" && sheet != "Yes" && sheet != "No"){
+    printf("Yes or no. Its not that hard. Try again\n");
+    scanf("%s", &sheet);
+}
+if (sheet == "yes" || sheet == "Yes"){
+    printf("Your character and their friend find a body in your neighbor's basement. Your neighbor catches you. Your character and their friend can either run:\n a) To the backyard\n b) Upstairs\n c) Out the front door.\n");
+    delay(all);
+    printf("Choice a makes your character and their friend to the backyard and a random generator rolls. No matter the outcome of the generator, your character dies.\n");
+    delay(all);
+    printf("Choice b makes your character and their friend run upstairs and a random generator rolls. If the generator lands on either 1 or 3, your character dies.\nIf the generator lands on 2, you get two choices:\n a) Beg for your character's life \n b) Fight the neighbor.\n");
+    delay(all);
+    printf("Both of these choices leads in your character's death.\n");
+    delay(all);
+    printf("Choice c makes your character and their friend to run out the front door. From their, you can choose where they go:\n a) The park\n b) Your character's house\n c) The children's school\n");
+    delay(all);
+    printf("Choice a allows your character and their friend to run to the park where they have 3 choices:\n a) Hide in trash cans around the park\n b) They can continue to run\n c) Fight the old man\n");
+    delay(all);
+    printf("Choice b lets the two children run towards your character's house. They have 3 choices:\n a) Use the short but dangerous route\n b) Use the long but safe route\n c) Go to your character's friend's house\n");
+    delay(all);
+    printf("Your character dies in all of these options.\n");
+    delay(all);
+    printf("Choice c lets the children run to their school. Along the way, they find a taco stand. They can either:\n a) Stop and eat tacos\n b) Continue running to the school.\n");
+    delay(all);
+    printf("Choice a causes the death of your character's friend and then gives your character a chance to steal the neighbor's car. To access the car, a code is needed. whether you type in the correct or not doesn't matter for your character dies either way.\n");
+    delay(all);
+    printf("Choice b makes your character's friend say no to tacos and they both reach the school. They both then get the chance to either:\n a) Fight the neighbor\n b) Steal the neighbor's car\n");
+    delay(all);
+    printf("Choice a causes in your character's death. Choice b only allows for your character's survival if you type in the right code.\n\n\n");
+    sheet = "no";
+    delay(all);
+}
+if (sheet == "no" || sheet == "No"){
+    printf("What is your name?\n");
+    scanf("%s", &name);
+    delay(all);
+    printf("What is your friend's name?\n");
+    scanf("%s", &other);
+    delay(all);
+    printf("%s and their best friend, %s, decide to sneak into %s's neighbor's basement.\n", name, other, name);
+    delay(all);
+    printf("%s finds a lifeless body in a freezer of %s's neighbor's basement.\n", other, name);
+    delay(all);
+    printf("The neighbor walks into the basement and sees the two children above the rotting body.\n");
+    delay(all);
+    printf("He yells and runs towards the both of you.\n%s and %s dodge and run up the stairs.\n", name, other);
+    delay(all);
+    printf("%s and %s reached the 1st floor and each saw several ways to run towards (type in a, b, or c):\n a) Run out the back door\n b) Run upstairs\n c) Run out the front door\n", name, other);
+    scanf("%s", &c1);
+    delay(all);
+    while (c1 != "a" && c1 != "A" && c1 != "b" && c1 != "B" && c1 != "c" && c1 != "C"){
+        printf("Try again. Read this time please:\n");
+        scanf("%s", &c1);
+    }
+    if (c1 == "a" || c1 =="A"){
+        printf("%s and their friend make a spurred decision and run towards the back door.\n", name);
+        delay(all);
+        printf("%s turns around for a moment and sees the neighbor grab a crossbow off the wall.\n", name);
+        delay(all);
+        printf("The two children reached the backyard and find the entire area fenced off.\nThey can either run to the left or the right.\n");
+        delay(all);
+        randomm = randint(0,1);
+        if (randomm == 0){
+            printf("%s and %s both decide to burst to the for left side of the fenced backyard.\n", name, other);
+            delay(all);
+            //6
+            printf("%s sees a metal trash, with a red letter 6 etched onto it, can and immediatly climbed onto it.\n", other);
+            delay(all);
+            printf("%s managed to climb over the fence while %s struggled to get on top of the trash can.\n", other, name);
+            delay(all);
+            printf("As %s finally managed to get on top of the trash can, the neighbor grabbed %s's leg and slammed %s to the ground.\n", name, name, name);
+            delay(all);
+            printf("The neighbor loaded his crossbow and shot it at %s, effectively killing %s.\n", name, name);
+            delay(all);
+            printf("YOUR CHARACTER HAS DIED. RESTART THE PROGRAM TO TRY AGAIN.\n");
+            exit(0);
+        }
+        if (randomm == 1){
+            printf("%s ran towards the right while %s ran towards the right, neither knowing of the other's actions.\n", name, other);
+            delay(all);
+            printf("%s reached the right side of the backyard and found a broken fence.\n", name);
+            delay(all);
+            printf("%s tried to fit through the gap the the broken fence had created.\n", name);
+            delay(all);
+            printf("Unfortunatly, the neighbor had went for %s first and %s was unable to fit through the gap in the fence, the neighbor caught %s.\n", name, name, name);
+            delay(all);
+            printf("The neighbor didn't waste any time and shot %s and immediatly sprint in the other direction, trying to reach %s.\n", name, other);
+            delay(all);
+            printf("YOUR CHARACTER HAS DIED. RESTART THE PROGRAM TO BEGIN ANEW.\n");
+            delay(all);
+            exit(0);
+        }
+    }
+    if (c1 == "b" || c1 == "B"){
+        printf("%s grabbed %s's arm and they both ran upstairs.\n", name, other);
+        delay(all);
+        printf("They reached the top of the stairs and saw several closed doors.\n");
+        delay(all);
+        randomm = randint(1,3);
+        if (randomm == 1){
+            printf("%s and %s sprint towards different doors and try to open them.\n", other, name);
+            delay(all);
+            printf("Before either of you could open any doors, the neighbor reached the second floor.\n");
+            delay(all);
+            printf("The neighbor was out of breath and loaded his crossbow with a bow.\n");
+            delay(all);
+            printf("%s tried to run past him but, he was able to get %s at point blank range. %s died\n", name, name, name);
+            delay(all);
+            printf("YOUR CHARACTER'S BODY HAS STOPPED FUNCTIONING. RESTART THIS FUNCTION TO GIVE THEM ANOTHER CHANCE.\n");
+            exit(1);
+        }
+        if (randomm == 2){
+            printf("%s and %s tried opening all doors as they hear the neighbor load his crossbow.\n", other, name);
+            delay(all);
+            printf("%s opened a door on the other end of the floor and went in.\n", other);
+            delay(all);
+            printf("%s ran towards the room and saw what seemed to be a washing machine inside.\n", name);
+            delay(all);
+            printf("Before %s could enter the room, %s shut the door.\n", name, other);
+            delay(all);
+            printf("%s yelled and banged on the door but, %s didn't open it.\n", name, other);
+            delay(all);
+            printf("The neighbor reached the second floor and stared directly at %s.\n", name);
+            delay(all);
+            printf("%s only saw two options before %s (type in either a or b):\n a) Try and beg for your life \n b) Attack the neighbor\n", name, name);
+            scanf("%s", &c1_1);
+        
+            while (c1_1 != "a" && c1_1 != "A" && c1_1 != "b" && c1_1 != "B" && c1_1 != "c" && c1_1 != "C"){
+                printf("Try again. Read this time please:\n");
+                scanf("%s", &c1_1);
+            }   
+            if (c1_1 == "a" || c1_1 == "A"){
+                printf("%s dropped down and groveled under the neighbor.\n", name);
+                delay(all);
+                printf("The neighbor looked down and smiled. He then shot you.\n");
+                delay(all);
+                printf("YOUR AVATAR HAS DECEASED. RESTART THE PROGRAM TO GIVE IT LIFE AGAIN.\n");
+                exit(1);
+            }
+            if (c1_1 == "b" || c1_1 == "B"){
+                printf("%s panicked and ran into the neighbor with the intention of harm.\n", name);
+                delay(all);
+                printf("The neighbor fell down and dropped the crossbow. %s picked it up.\n", name);
+                delay(all);
+                printf("%s grabbed the crossbow and pointed it towards the neighbor.\n", name);
+                delay(all);
+                printf("The neighbor saw your character's actions and slowly backed up.\n");
+                delay(all);
+                //4
+                printf("%s glances down and sees the number 4 on the crossbow.\n", name);
+                delay(all);
+                printf("Will your character actually shoot the neighbor? (type in yes or no)\n");
+                scanf("%s", &flamba);
+                delay(all);
+                    while (flamba != "yes" && flamba != "Yes" && flamba != "no" && flamba != "No"){
+                        printf("Yes or no. Try again:\n");
+                        scanf("%s", &flamba);
+                    }
+                    if (flamba == "yes" || flamba == "Yes"){
+                        printf("%s looks down and sees an arrow in the crossbow.\n", name);
+                        delay(all);
+                        printf("%s grips their hand on the trigger of the crossbow.\n", name);
+                        delay(all);
+                        printf("Will %s shoot the neighbor?\n", name);
+                        scanf("%s", &fleemba);
+                        delay(all);
+                        while (fleemba != "yes" && fleemba != "Yes" && fleemba != "no" && fleemba != "No"){
+                            printf("Yes or no. Try again:\n");
+                            scanf("%s", &flamba);
+                            delay(all);
+                        }
+                        if (fleemba == "yes" || fleemba == "Yes"){
+                            printf("%s shot the neighbor.\n");
+                            delay(all);
+                            printf("The old man screamed in pain and smacked %s.\n", name);
+                            delay(all);
+                            printf("The neighbor pulled the crossbow out of his shoulder and picked up the crossbow %s dropped.\n", name);
+                            delay(all);
+                            printf("As he went to shoot %s, %s burst out of the laundry room and ran at the neighbor.\n", name, other);
+                            delay(all);
+                            printf("The neighbor shot %s and then shoots %s", name, other);
+                            delay(all);
+                            printf("CHARACTER IS DEAD. RESTART THE PROGRAM TO TRY AGAIN.\n");
+                            exit(1);
+                        }
+                        if (fleemba == "no" || fleemba == "No"){
+                            printf("%s decided not to shoot and lowered the crossbow.\n");
+                            delay(all);
+                            printf("The old man screamed and smacked the lights out of %s.\n", name);
+                            delay(all);
+                            printf("%s dropped like a sack of hammers.\n", name);
+                            delay(all);
+                            printf("%s woke up hours later in the middle of some desert. %s looked around and saw %s near them.\n", name, name, other);
+                            delay(all);
+                            printf("%s shook %s awake and they both wandered around, trying to find something.\n", name, other);
+                            delay(all);
+                            printf("They both died of starvation and dehydration.\n");
+                            delay(all);
+                            printf("YOUR CHARACTER DIED. RESTART WHEN YOU WANT TO REVIVE THEM.\n");
+                            exit(1);
+                        }
+                    }
+                    if (flamba == "no" || flamba == "No"){
+                        printf("%s decided not to shoot and lowered the crossbow.\n");
+                        delay(all);
+                        printf("The old man screamed and smacked the lights out of %s.\n", name);
+                        delay(all);
+                        printf("%s dropped like a sack of hammers.\n", name);
+                        delay(all);
+                        printf("%s woke up hours later in the middle of a jungle and looked around them.\n", name);
+                        delay(all);
+                        printf("%s looked around and saw %s passed out on some vines and shook them awake.\n", name, other);
+                        delay(all);
+                        printf("The children walked around and ate some bring red mushrooms.\n");
+                        delay(all);
+                        printf("Both children died of mushroom poisining.\n");
+                        delay(all);
+                        printf("YOUR CHARACTER DIED FROM MUSHROOMS... RESTART WHEN YOU WANT TO REVIVE THEM.\n");
+                        exit(1);
+                    }
+            }
+        }
+        if (randomm == 3){
+            printf("%s managed to open the bathroom and rush in. %s immediatly followed.\n", name, other);
+            delay(all);
+            printf("%s and %s both held their breaths as they heard the neighbor reach the second floor and check every room.\n", name, other);
+            delay(all);
+            printf("He finally reached the bathroom door and tried to open it.\n");
+            delay(all);
+            printf("It was locked. The children heard some tinkling from the other side of the door. The neighbor had keys for all the rooms in his house.\n");
+            delay(all);
+            printf("The neighbor burst in and looked at the two cowering children at the other side of the bathroom.\n");
+            delay(all);
+            printf("He shot them both.\n");
+            delay(all);
+            printf("IT LOOKS LIKE YOUR CHARACTER DIED. RESTART TO RESTART.\n");
+            delay(all);
+            exit(1);
+        }
+    }
+    if (c1 == "c" || c1 == "C"){
+        printf("%s grabbed %s's hand and dragged the both of them towards the front door.\n", other, name);
+        delay(all);
+        printf("They reached the door and found that the door was open.\n");
+        delay(all);
+        printf("They swung it open and ran out, the neighbor yelling behind them.\n");
+        delay(all);
+        printf("%s and %s were sure that the neighbor wouldn't follow them into the night but, looking behind them, they saw the old man running at them with a crossbow in his arms.\n", other, name);
+        delay(all);
+        printf("They panicked and ran towards the (type in a, b, or c):\n a) The park\n b) %s's home\n c) Their school.\n", name);
+        scanf("%s", &aa);
+        delay(all);
+    }
+    while (aa != "a" && aa != "A" && aa != "b" && aa != "B" && aa != "c" && aa != "C"){
+        printf("Try again. Read this time please:\n");
+        scanf("%s", &aa);
+    }
+    if (aa == "a" || aa == "A"){
+        printf("%s started running towards some random direction and %s just followed.\n", name, other);
+        delay(all);
+        printf("The kids kept running, taking random turns and finally, ran into the park.\n");
+        delay(all);
+        printf("%s frantically looked around with %s, trying to find some sort of hiding spot.\n", other, name);
+        delay(all);
+        printf("%s and %s could only\n a) Hide in the trash cans around the park\n b) Continue running\n c) Try and fight the old man.\n", name, other);
+        delay(all);
+        printf("What do they do? (type in a, b, or c)\n");
+        scanf("%s", &fff);
+        delay(all);
+            while (fff != "a" && fff != "A" && fff != "b" && fff != "B" && fff != "c" && fff != "C"){
+            printf("Try again. Read this time please:\n");
+            scanf("%s", &fff);
+        }
+        if (fff == "a" || fff == "A"){
+            printf("The children decided to hide within one of the many trash cans in the park.\n");
+            delay(all);
+            printf("%s jumped into one of the many trash cans in the park.\n", other);
+            delay(all);
+            //9
+            printf("%s jumped into the trash can on the other side of the park. While running there %s sees a slide with a green 9 etched onto it.\n", name, name);
+            delay(all);
+            printf("After 10 or so minutes hiding in the smelly can, the children heard the dragging steps of the neighbor and his out of breath breatheing.\n");
+            delay(all);
+            printf("At that moment, %s farted.\n", name);
+            delay(all);
+            printf("Loudly.\n");
+            delay(all);
+            printf("%s held their breath as the footsteps of the old man stopped.\n", name);
+            delay(all);
+            printf("The old man ripped open the trash can and shot %s.\n", name);
+            delay(all);
+            printf("CONGRATS. YOUR CHARACTER HAS ASCENDED. RESTART THE PROGRAM TO BRING THEM BACK.\n");
+            delay(all);
+            exit(2);
+        }
+        if (fff == "b" || fff == "B"){
+            printf("%s and %s saw a group of teenagers come towards the park and they both decide to continue running.\n", name, other);
+            delay(all);
+            printf("They ran away towards the opposite direction of the teenagers and reached a sort of wooden bridge.\n");\
+            delay(all);
+            printf("As they tried to cross, a car zoomed past them and immediatly halted.\n");
+            delay(all);
+            printf("From the car stepped out the neighbor with his crossbow.\n");
+            delay(all);
+            printf("%s and %s sprinted across the bridge.\n", name, other);
+            delay(all);
+            printf("The neighbor first shot %s and then aimed for %s but, missed so %s lived.\n", name, other, other);
+            delay(all);
+            //2
+            printf("As %s faded from existence, %s saw a neon green 2 etched onto the bottom of the rails.\n", name, name);
+            delay(all);
+            printf("YOUR AVATAR'S BRAIN STOPPED FUNCTIONING. RESTART THE PROGRAM TO TRY AGAIN.\n");
+            delay(all);
+            exit(2);
+        }
+        if (fff == "c" || fff == "C"){
+            printf("As they decided to fight the old man, the neighbor stumbled into the park and randomly shot somewhere.\n");
+            delay(all);
+            printf("The arrow thuncked into the slide. %s ran and pulled it out of the slide and saw a green 9 on the slide.\n", name);
+            delay(all);
+            printf("%s then screamed and tackled the neighbor, who fell easily, before he could reload his crossbow.\n", other);
+            delay(all);
+            printf("%s ran over and whacked the old man with the arrow and saw something fall out of his pocket.\n", name);
+            delay(all);
+            printf("%s dropped the arrow and grabbed what seemed to be a note and ran away with %s.\n", name, other);
+            delay(all);
+            printf("After they ran a few blocks, they stopped and opened the note.\n");
+            delay(all);
+            // 9, 2, 6, 4, 3
+            printf("On it was several scribbled images. First a slide, bridge, what looked like a metal cup, a bow, and the face of a cat.\n");
+            delay(all);
+            printf("As %s and %s wondered about the cryptic drawings, they didn't notice a Ford stop on the other end of the street.\n", name, other);
+            delay(all);
+            printf("%s was the first to notice the neighbor come out the car and %s sprinted away, leaving %s behind.\n", other, other, name);
+            delay(all);
+            printf("%s took a second to process what was happening but, it was too late, the neighbor shot %s.\n", name, name);
+            delay(all);
+            printf("YOUR CHARACTER HAS ENDED. YOU CAN TRY AGAIN BY RESTARTING THE PROGRAM.\n");
+            delay(all);
+            exit(2);
+        }
+    }
+    if (aa == "b" || aa == "B"){
+        printf("%s said to go to %s's home and ask for help.\n", other, name);
+        delay(all);
+        printf("%s agreed and they began sprinting in the general direction of %s's house.\n", name, name);
+        delay(all);
+        printf("%s knew only two routes to %s's house,\n a)the short but dangerous route \n b)the long but extremely safe route \n c)go to %s's house.\n", name, name, other);
+        delay(all);
+        printf("The children used the (type a or b or c):\n");
+        scanf("%s", &c1_2_2);
+        delay(all);
+        while (c1_2_2 != "a" && c1_2_2 != "A" && c1_2_2 != "b" && c1_2_2 != "B" && c1_2_2 != "c" && c1_2_2 != "C"){
+            printf("Try again. Read this time please:\n");
+            scanf("%s", &c1_2_2);
+        }           
+        if (c1_2_2 == "a" || c1_2_2 == "A"){
+            printf("%s grabbed %s and ran towards the dangerous route and ducked into an alleyway.", name, other);
+            delay(all);
+            printf("They ran past dumpsters and homeless people.\n");
+            delay(all);
+            printf("As %s was running, %s tripped on a closed box.\n", other, name);
+            delay(all);
+            printf("%s helped %s up and heard a meow from the box.\n", other, name);
+            delay(all);
+            printf("%s opened the box and saw a kitten in the box.\n", name);
+            delay(all);
+            //3
+            printf("On the stomach of the cat, a post-it with the letter three was stuck on the cats fur.\n");
+            delay(all);
+            printf("They left the cat behind and continued running.\n");
+            delay(all);
+            printf("As %s and %s ran towards the end of the alleyway, an suv halted right in front of the exit of the alleyway.\n", other, name);
+            delay(all);
+            printf("The neighbor stepped out of the suv and shot %s.\n", other);
+            delay(all);
+            printf("%s screamed and tried to run but then got shot by the neighbor.\n", name);
+            delay(all);
+            printf("OH NO. YOUR CHARACTER DIED. TRY AGAIN BY RESTARTING.\n");
+            delay(all);
+            exit(3);
+        }
+        if (c1_2_2 == "b" || c1_2_2 == "B"){
+            printf("%s not wanting to go through any more danger, decided to go through the safe route.\n", name);
+            delay(all);
+            printf("The children ran through the road trying to reach %s's house.\n", name);
+            delay(all);
+            printf("While they were running, a ford car passed them and slowed down till it was in pace with the children.\n");
+            delay(all);
+            printf("The window rolled down and the neighbor shot %s.", other);
+            delay(all);
+            printf("He then stopped the car and reloaded his weapon.\n");
+            delay(all);
+            printf("He shot %s.\n", name);
+            delay(all);
+            printf("YOUR AVATAR HAS DECEASED. RESTART THE PROGRAM TO TRY AGAIN.\n");
+            delay(all);
+            exit(3);
+        }
+        if (c1_2_2 == "c" || c1_2_2 == "C"){
+            printf("%s suggested going to their house because its closer.\n", other);
+            delay(all);
+            printf("%s agreed and ran behind %s.\n", name, other);
+            delay(all);
+            printf("While they were running, a ford came hurtling towards them.\n");
+            delay(all);
+            printf("%s saw the neighbor in the driver's seat and ran in the other direction.\n", name);
+            delay(all);
+            printf("Before the kids could duck into an alleyway, the ford hit both of the kids, killing them.\n");
+            delay(all);
+            printf("RESTART THE PROGRAM TO UNDEAD YOUR CHARACTER.\n");
+            delay(all);
+            exit(3);
+        }
+    }
+    if (aa == "c" || aa == "C"){
+        printf("%s said that they both should go to their school and call the cops.\n", other);
+        delay(all);
+        printf("%s said yes and they began to sprint towards their school.\n", name);
+        delay(all);
+        printf("While running, they saw a taco stand and %s's stomach grumbled. %s said they should stop and eat a taco.\n", name, name);
+        delay(all);
+        printf("What should they do \n a)Stop and eat a taco or two \n b)Keep running to the school\n");
+        scanf("%s", &taco);
+        delay(all);
+    while (taco != "a" && taco != "A" && taco != "b" && taco != "B" && taco != "c" && taco != "C"){
+        printf("Try again. Read this time please:\n");
+        scanf("%s", &c1_2_2);
+    }    
+    if (taco == "a" || taco == "A"){
+        printf("%s stopped for a second and tried to open the taco stand but, it seemed locked.\n", other);
+        delay(all);
+        printf("%s heard a car speed up towards them and ran into an alleyway but, before %s could call for %s, the ford hit %s.\n", name, name, other, other);
+        delay(all);
+        printf("%s, shocked, just ran to the other end of the alleyway.\n", name);
+        delay(all);
+        printf("%s ran for a bit and reached their school. %s felt sad.\n", name, name);
+        delay(all);
+        printf("%s heard an engine in the distance and tried entering the school.\n", name);
+        delay(all);
+        printf("%s found one of the side gates open and entered through it.\n", name);
+        delay(all);
+        printf("%s speed walked to the office and tried to open it. The doors were locked.\n", name);
+        delay(all);
+        printf("The child started to panic a bit and saw the lights of the ford in the school parking lot.\n");
+        delay(all);
+        printf("%s tried to find a place to hide and hid in a bush and held their breath.\n", name);
+        delay(all);
+        printf("The neighbor walks past %s and %s waits for a full minute.\n", name, name);
+        delay(all);
+        printf("%s sprinted towards the neighbors car and tries to open it.\n", name);
+        delay(all);
+        printf("%s couldn't open the car door and saw a passcode on the side of the door.\n", name);
+        delay(all);
+        printf("What is the code:\n");
+        scanf("%i", &okBuddy);
+    }
+    if (okBuddy == 92643){
+        printf("%s entered the car and managed to find the keys in the visor.\n", name);
+        delay(all);
+        printf("%s managed to start the car and saw the neighbor running towards the car.\n", name);
+        delay(all);
+        printf("%s managed to drive back and smash into the neighbor.\n", name);
+        delay(all);
+        printf("The child stepped out off the car and looked at the neighbor.\n");
+        delay(all);
+        printf("The neighbor wasn't dead, he opened his eyes and shot the child.\n");
+        delay(all);
+        printf("CHARACTER DEAD. RESTART TO TRY AGAIN\n");
+        delay(all);
+        exit(4);
+    }
+    else{
+        printf("The cars alarm blared and %s whipped around.\n", name);
+        delay(all);
+        printf("%s saw the neighbor rush towards the car and before %s could start running, the neighbor shot %s.\n", name, name, name);
+        delay(all);
+        printf("RESTART THE PROGRAM TO BREATH LIFE INTO YOUR DEAD AVATAR.\n");
+        delay(all);
+        exit(4);
+    }
+    if (taco == "b" || taco == "B"){
+        printf("%s said no and they continued running.\n", other);
+        delay(all);
+        printf("They reached the school and they hid as they hear a car park in the school's parking lot.\n");
+        delay(all);
+        printf("The children watched as the neighbor broke the chains locking the front gate using a bolt cutter.\n");
+        delay(all);
+        printf("%s suggested to try and steal the neighbor's car but %s said no and suggested to try and fight him.\n", name, other);
+        delay(all);
+        printf("What do they do: \n a)Steal the neighbor's car\n b)Attack the neighbor.\n");
+        scanf("%s", &klop);
+        delay(all);
+    }
+    while (klop != "a" && klop != "A" && klop != "b" && klop != "B" && klop != "c" && klop != "C"){
+        printf("Try again. Read this time please:\n");
+        scanf("%s", &klop);
+    } 
+    if (klop == "b" || klop == "B"){
+        printf("%s decided to help %s and they both crept behind the neighbor as he turned on his phone flashlight.\n", name, other);
+        delay(all);
+        printf("%s kicked the inside of the old man's knees and he toppled to the ground.\n", other);
+        delay(all);
+        printf("The old man yelled and tried to shoot %s but, missed and %s grabbed the crossbow from the old man.\n", other, name);
+        delay(all);
+        printf("He punched randomly and was able to get up the ground.\n");
+        delay(all);
+        printf("He picked up a big stick and before %s could react, the neighbor smashed the stick into %s's head, killing %s.\n", name, name);
+        delay(all);
+        printf("DEAD CHARACTER. RESTART PROGRAM TO TRY AGAIN.\n");
+        delay(all);
+        exit(5);
+    }
+    if (klop == "a" || klop == "A"){
+        printf("%s just ignores %s and creeps towards the car.\n", name, other);
+        delay(all);
+        printf("%s walks behind %s and they both see a keypad on the side of the door.\n", other, name);
+        delay(all);
+        printf("What is the code:\n");
+        scanf("%s", &okBuddy);
+        delay(all);
+    }
+    if (okBuddy == 92643){
+        printf("%s managed to type in the code with sheer luck and the door clicked open.\n", name);
+        delay(all);
+        printf("%s climbed into the passenger seat of the ford and %s sat in the driver's seat.\n", name, other);
+        delay(all);
+        printf("As %s shut the door, the children saw the neighbor hurtling towards the car at high velocities.\n", other);
+        delay(all);
+        printf("%s found the keys in the visor and turned on the car.\n", other);
+        delay(all);
+        printf("%s made the car go back and smash into the sprinting neighbor.\n", other);
+        delay(all);
+        printf("The neighbor died.\n");
+        delay(all);
+        printf("YOU ACTUALLY WON. GOOD JOB. YOUR CHARACTER LIVED HAPPILY EVER AFTER.\n");
+        delay(all);
+        exit(5);
+    }
+    if (okBuddy != 92643)
+    {
+        printf("The car's alarm blared and %s and %s backed away from the car.\n", name, other);
+        delay(all);
+        printf("%s looked towards the school gate but, neither of the children could see the neighbor coming towards them.\n", name);
+        delay(all);
+        printf("%s tries to randomly type in random numbers into the keypad, each time getting the code wrong.\n", other);
+        delay(all);
+        printf("As %s tries to silence the car, %s saw the neighbor show up in the school quad and start sprinting towards them.\n", other, name);
+        delay(all);
+        printf("He shoots you both.\n");
+        delay(all);
+        printf("YOUR CHARACTER WAS SO CLOSE TO GREATNESS. RESTART THE PROGRAM TO TRY AGAIN.\n");
+        delay(all);
+        exit(5);
+    }
+}
+}
