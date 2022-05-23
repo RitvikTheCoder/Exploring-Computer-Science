@@ -1,0 +1,17 @@
+#include<linkbot.h>
+CLinkbotI robot1, robot2;
+
+robot1.setSpeed(3, 2);
+
+robot1.turnRightNB(7,2,3.69);
+robot2.turnLeft(80, 1.75, 3.69);
+
+robot2.setJointSpeed(JOINT1, 130);
+
+robot2.driveTimeNB(8.6);
+
+
+
+robot1.setSpeed(2.4, 2);
+robot1.driveDistanceNB(20,2);
+delay(10000);
